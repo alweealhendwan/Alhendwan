@@ -3,8 +3,7 @@
    Dark. Cinematic. Arabic-rooted. Not like anyone else.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700&family=Noto+Naskh+Arabic:wght@400;600&family=Inter:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700&family=Noto+Naskh+Arabic:wght@400;600&family=Inconsolata:wght@300;400;500;600;700&display=swap');
 /* ---- Tokens ---- */
 :root {
   --void:        #090909;
@@ -21,6 +20,7 @@
   --font-display: 'Unbounded', sans-serif;
   --font-arabic:  'Noto Naskh Arabic', serif;
   --font-body:    'Inter', sans-serif;
+  --font-text:    'Inconsolata', sans-serif;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --nav-h: 68px;
@@ -348,7 +348,8 @@ ul, ol { list-style: none; }
 }
 
 .hero__desc {
-  font-size: 13px;
+  font-family: var(--font-text);
+  font-size: 16px;
   line-height: 1.95;
   color: var(--muted);
   max-width: 380px;
@@ -425,7 +426,8 @@ ul, ol { list-style: none; }
 }
 
 .body-text {
-  font-size: 13px;
+  font-family: var(--font-text);
+  font-size: 15px;
   line-height: 1.95;
   color: var(--muted);
 }
@@ -626,7 +628,7 @@ ul, ol { list-style: none; }
 }
 .pillar__title {
   font-family: var(--font-display);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -634,7 +636,8 @@ ul, ol { list-style: none; }
   margin-bottom: 10px;
 }
 .pillar__body {
-  font-size: 12px;
+  font-family: var(--font-text);
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.75;
 }
@@ -855,7 +858,8 @@ ul, ol { list-style: none; }
   margin-bottom: 28px;
 }
 .story-chapter__text {
-  font-size: 14px;
+  font-family: var(--font-text);
+  font-size: 17px;
   line-height: 2;
   color: var(--muted);
   max-width: 600px;
