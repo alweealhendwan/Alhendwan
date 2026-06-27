@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs — Alhendwan</title>
+  <meta name="description" content="Frequently asked questions about Alhendwan — showcase, payments, and more."/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<audio id="bg-music" loop preload="none">
+  <source src="audio/ambient.mp3" type="audio/mpeg"/>
+</audio>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><img src="Alhendwan (2).png" alt="Alhendwan"/></a>
+  <div class="nav__links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="story.html">Our Story</a>
+    <a href="faqs.html">FAQs</a>
+  </div>
+  <div class="nav__right">
+    <div class="nav__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 6.5 6.5a7.5 7.5 0 0 0 10.15 10.15z"/>
+      </svg>
+      <input id="nav-search-input" type="text" placeholder="Search" aria-label="Search"/>
+    </div>
+    <button class="nav__music" id="music-toggle" aria-label="Toggle music">
+      <div class="music-bars paused" id="music-bars"><span></span><span></span><span></span></div>
+      <span id="music-label">Play</span>
+    </button>
+  </div>
+  <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav__mobile">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="story.html">Our Story</a>
+  <a href="faqs.html">FAQs</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <span class="label">Information</span>
+  <h1 class="page-hero__title">FAQs</h1>
+  <p class="page-hero__sub">Answers to common questions</p>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+  </div>
+</div>
+
+<!-- FAQ CONTENT -->
+<main class="faq-wrap">
+  
+  <p class="faq-intro">
+    This website serves as a showcase for Alhendwan's collections. All payments and checkout processes are handled separately through our secure partners. Below are answers to the most common questions.
+  </p>
+
+  <!-- FAQ 1 -->
+  <div class="faq-item reveal">
+    <h3 class="faq-item__question">How do I make a purchase?</h3>
+    <p class="faq-item__answer">
+      This website is a showcase for our collections. To make a purchase, you will be directed to our secure checkout partner. The payment link will be provided at the time of purchase. [Payment partner placeholder — update with your provider]
+    </p>
+  </div>
+
+  <!-- FAQ 2 -->
+  <div class="faq-item reveal" data-delay="60">
+    <h3 class="faq-item__question">What payment methods are accepted?</h3>
+    <p class="faq-item__answer">
+      We accept payments through our secure payment partner. [Payment methods placeholder — update with your accepted methods like credit cards, PayPal, etc.]
+    </p>
+  </div>
+
+  <!-- FAQ 3 -->
+  <div class="faq-item reveal" data-delay="120">
+    <h3 class="faq-item__question">Do you ship internationally?</h3>
+    <p class="faq-item__answer">
+      Yes, we ship worldwide. Shipping costs and delivery times will be calculated at checkout. [Shipping placeholder — update with your shipping policy]
+    </p>
+  </div>
+
+  <!-- FAQ 4 -->
+  <div class="faq-item reveal" data-delay="180">
+    <h3 class="faq-item__question">Can I return or exchange an item?</h3>
+    <p class="faq-item__answer">
+      We want you to love your purchase. If you're not completely satisfied, please contact us within [X] days of receiving your order. [Return policy placeholder — update with your return policy]
+    </p>
+  </div>
+
+  <!-- FAQ 5 -->
+  <div class="faq-item reveal" data-delay="240">
+    <h3 class="faq-item__question">How do I know my size?</h3>
+    <p class="faq-item__answer">
+      A size guide will be available on each product page. We recommend checking the measurements before placing your order. [Size guide placeholder — update with your size guide]
+    </p>
+  </div>
+
+  <!-- FAQ 6 -->
+  <div class="faq-item reveal" data-delay="300">
+    <h3 class="faq-item__question">Is my information secure?</h3>
+    <p class="faq-item__answer">
+      Yes. All payment transactions are processed through our secure payment partner. We do not store any payment information on our servers. [Security placeholder — update with your security policy]
+    </p>
+  </div>
+
+  <!-- FAQ 7 -->
+  <div class="faq-item reveal" data-delay="360">
+    <h3 class="faq-item__question">How can I contact you?</h3>
+    <p class="faq-item__answer">
+      You can reach us through our social media channels or by email at <a href="#" style="color:var(--yellow); transition:color 0.3s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--yellow)'">hello@alhendwan.com</a>. We aim to respond within 2–3 business days.
+    </p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <p class="footer__col-title">Navigate</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="story.html">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__col-title">Connect</p>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">X / Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 Alhendwan. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
