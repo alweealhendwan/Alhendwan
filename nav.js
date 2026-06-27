@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* Active link */
-  const page = location.pathname.split('/').pop() || 'landing.html';
+  const page = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(a => {
     if (a.getAttribute('href') === page) a.classList.add('active');
   });
