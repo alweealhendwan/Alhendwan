@@ -3,7 +3,7 @@
    Dark. Cinematic. Arabic-rooted. Not like anyone else.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700&family=Noto+Naskh+Arabic:wght@400;600&family=Inconsolata:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700&family=Noto+Naskh+Arabic:wght@400;600&family=Inconsolata:wght@300;400;500;600;700&family=Cascadia+Mono:wght@300;400;600;700&display=swap');
 /* ---- Tokens ---- */
 :root {
   --void:        #090909;
@@ -18,7 +18,7 @@
   --faint:       #2A2A2A;
 
   --font-display: 'Unbounded', sans-serif;
-  --font-arabic:  'Noto Naskh Arabic', serif;
+  --font-arabic: 'Cascadia Mono', 'Courier New', monospace;
   --font-body:    'Inter', sans-serif;
   --font-text:    'Inconsolata', sans-serif;
 
@@ -243,6 +243,19 @@ ul, ol { list-style: none; }
 @keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+/* Mobile ticker fix - slower on smaller screens */
+@media (max-width: 768px) {
+  .ticker {
+    animation: ticker 50s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticker {
+    animation: ticker 65s linear infinite;
+  }
 }
 
 /* ============================================================
