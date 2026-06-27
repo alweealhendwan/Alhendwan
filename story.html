@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story — Alhendwan</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<audio id="bg-music" loop preload="none">
+  <source src="audio/ambient.mp3" type="audio/mpeg"/>
+</audio>
+
+<nav class="nav">
+  <a href="landing.html" class="nav__logo"><img src="Alhendwan (2).png" alt="Alhendwan"/></a>
+  <div class="nav__links">
+    <a href="landing.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="story.html">Our Story</a>
+  </div>
+  <div class="nav__right">
+    <div class="nav__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 6.5 6.5a7.5 7.5 0 0 0 10.15 10.15z"/>
+      </svg>
+      <input id="nav-search-input" type="text" placeholder="Search" aria-label="Search"/>
+    </div>
+    <button class="nav__music" id="music-toggle" aria-label="Toggle music">
+      <div class="music-bars paused" id="music-bars"><span></span><span></span><span></span></div>
+      <span id="music-label">Play</span>
+    </button>
+  </div>
+  <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav__mobile">
+  <a href="landing.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="story.html">Our Story</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <span class="label">The Story</span>
+  <h1 class="page-hero__title">الهندوان</h1>
+  <p class="page-hero__sub">Where we come from · why we create</p>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+  </div>
+</div>
+
+<!-- STORY BODY -->
+<main style="padding:0 60px;">
+  <div class="story-body">
+
+    <article class="story-chapter reveal">
+      <span class="story-chapter__index">١</span>
+      <h2 class="story-chapter__title">Between Two Worlds</h2>
+      <p class="story-chapter__text">
+        Alhendwan was born in the space between things — between languages, between continents, between what you inherit and what you choose. It started not with a mood board or a business plan, but with a feeling: the quiet frustration of not seeing yourself reflected in the clothes you wore.
+      </p>
+      <blockquote class="story-pullquote">
+        لم نكن نريد ملابس عربية. أردنا ملابس تفهمنا كعرب.
+      </blockquote>
+      <p class="story-chapter__text">
+        The name — الهندوان — carries history and warmth. It's a declaration that this brand belongs to those who carry the weight of a culture and still move freely through the world.
+      </p>
+    </article>
+
+    <article class="story-chapter reveal">
+      <span class="story-chapter__index">٢</span>
+      <h2 class="story-chapter__title">What We Make</h2>
+      <p class="story-chapter__text">
+        We don't make traditional garments. We make modern clothing — clean silhouettes, quality fabrics, pieces built for every day — imbued with the restraint, the geometry, and the deliberateness that runs deep in Arabic visual culture.
+      </p>
+      <blockquote class="story-pullquote">
+        التقليل ليس فراغًا — في أيدينا، هو دقة متناهية.
+      </blockquote>
+      <p class="story-chapter__text">
+        Every design starts with a single question: what does this say without saying anything? A subtle proportion. A quiet detail. The absence of excess. These are not accidents.
+      </p>
+    </article>
+
+    <article class="story-chapter reveal">
+      <span class="story-chapter__index">٣</span>
+      <h2 class="story-chapter__title">The Beginning</h2>
+      <p class="story-chapter__text">
+        We're starting small. Three to five designs. Each one considered for longer than most brands spend on an entire collection. We believe the first thing you put into the world says everything — so we took our time.
+      </p>
+      <p class="story-chapter__text">
+        This is not a brand that wants to be everywhere. It wants to be worn by the right person, at the right moment. If you've read this far, you probably already know who you are.
+      </p>
+      <div style="margin-top:44px; display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="shop.html" class="btn btn--fill">See the Collection</a>
+        <a href="#" class="btn btn--outline">Get in Touch</a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<!-- CLOSING BAND -->
+<div class="statement">
+  <p class="statement__text">
+    We didn't want to make another brand. We wanted to make <em>the one</em> that was missing.
+  </p>
+  <p class="statement__arabic">الهندوان — هذا هو المكان الذي اخترنا أن نقف فيه.</p>
+  <a href="shop.html" class="btn btn--fill">Explore First Drop</a>
+</div>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <p class="footer__col-title">Navigate</p>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="story.html">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__col-title">Connect</p>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">X / Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 Alhendwan. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

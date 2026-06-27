@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alhendwan — Where East Meets Street</title>
+  <meta name="description" content="Alhendwan — minimalist clothing rooted in Arabic culture."/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<audio id="bg-music" loop preload="none">
+  <source src="audio/ambient.mp3" type="audio/mpeg"/>
+</audio>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <a href="landing.html" class="nav__logo">
+    <img src="Alhendwan (2).png" alt="Alhendwan"/>
+  </a>
+  <div class="nav__links">
+    <a href="landing.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="story.html">Our Story</a>
+  </div>
+  <div class="nav__right">
+    <div class="nav__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 6.5 6.5a7.5 7.5 0 0 0 10.15 10.15z"/>
+      </svg>
+      <input id="nav-search-input" type="text" placeholder="Search" aria-label="Search"/>
+    </div>
+    <button class="nav__music" id="music-toggle" aria-label="Toggle music">
+      <div class="music-bars paused" id="music-bars">
+        <span></span><span></span><span></span>
+      </div>
+      <span id="music-label">Play</span>
+    </button>
+  </div>
+  <button class="nav__hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav__mobile">
+  <a href="landing.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="story.html">Our Story</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__bg-letter">ا</div>
+    <p class="hero__kicker">New Brand — First Drop Coming</p>
+    <h1 class="hero__headline">
+      Wear the<br>
+      <strong>culture.</strong>
+    </h1>
+    <p class="hero__arabic-sub">الهندوان — حيث الشرق يلتقي بالشارع</p>
+    <p class="hero__desc">
+      Not Arabic clothing. Clothing that understands you as Arabic. Minimalist silhouettes. Deliberate choices. A brand built between two worlds.
+    </p>
+    <div class="hero__actions">
+      <a href="shop.html" class="btn btn--fill">Explore Collection</a>
+      <a href="story.html" class="btn btn--outline">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ARABIC TICKER ========== -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+  </div>
+</div>
+
+<!-- ========== PILLARS ========== -->
+<div class="pillars reveal">
+  <div class="pillar">
+    <span class="pillar__num">١</span>
+    <div class="pillar__title">Origin</div>
+    <p class="pillar__body">Rooted in Arabic culture — not worn as costume, carried as identity.</p>
+  </div>
+  <div class="pillar">
+    <span class="pillar__num">٢</span>
+    <div class="pillar__title">Craft</div>
+    <p class="pillar__body">Three to five designs. Each one considered longer than most collections.</p>
+  </div>
+  <div class="pillar">
+    <span class="pillar__num">٣</span>
+    <div class="pillar__title">Restraint</div>
+    <p class="pillar__body">Minimalism as a cultural value, not an aesthetic trend. Less always means more.</p>
+  </div>
+  <div class="pillar">
+    <span class="pillar__num">٤</span>
+    <div class="pillar__title">Duality</div>
+    <p class="pillar__body">For those who move between worlds without having to explain themselves.</p>
+  </div>
+</div>
+
+<!-- ========== MANIFESTO ========== -->
+<div class="manifesto">
+  <div class="manifesto__left reveal">
+    <span class="label">Philosophy</span>
+    <h2 class="heading" style="margin-bottom:28px;">
+      Not Arabic<br>clothing —<br>clothing with<br>Arabic soul.
+    </h2>
+    <blockquote class="manifesto__pull">
+      نصنع ملابس تحمل الروح، لا الزي.
+    </blockquote>
+    <p class="body-text" style="max-width:400px; margin-bottom:36px;">
+      We don't dress you in a culture. We give culture a shape that fits into your everyday — quietly, with intention, without needing to announce itself.
+    </p>
+    <a href="story.html" class="btn btn--outline">Read the full story</a>
+  </div>
+  <div class="manifesto__right reveal" data-delay="100">
+    <div class="manifesto__bg-char">ه</div>
+    <div class="manifesto__placeholder">
+      <p>Campaign image — coming soon</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== COLLECTION ========== -->
+<section class="section">
+  <div class="collection">
+    <div class="collection__head reveal">
+      <div>
+        <span class="label">The First Drop</span>
+        <h2 class="heading">A small beginning.<br>An intentional one.</h2>
+      </div>
+      <a href="shop.html" class="btn btn--outline">View All</a>
+    </div>
+    <div class="collection__grid">
+
+      <div class="card reveal" data-category="tops">
+        <div class="card__visual">
+          <span class="card__glyph">ا</span>
+          <div class="card__soon">Coming Soon</div>
+        </div>
+        <div class="card__info">
+          <span class="card__name">Design 01</span>
+          <span class="card__cat">Tops</span>
+        </div>
+      </div>
+
+      <div class="card reveal" data-delay="80" data-category="tops">
+        <div class="card__visual">
+          <span class="card__glyph">ل</span>
+          <div class="card__soon">Coming Soon</div>
+        </div>
+        <div class="card__info">
+          <span class="card__name">Design 02</span>
+          <span class="card__cat">Tops</span>
+        </div>
+      </div>
+
+      <div class="card reveal" data-delay="160" data-category="outerwear">
+        <div class="card__visual">
+          <span class="card__glyph">ه</span>
+          <div class="card__soon">Coming Soon</div>
+        </div>
+        <div class="card__info">
+          <span class="card__name">Design 03</span>
+          <span class="card__cat">Outerwear</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== DARK STATEMENT ========== -->
+<div class="statement">
+  <p class="statement__text">
+    Between two languages. Between two cities. Between what you <em>inherit</em> and what you choose.
+  </p>
+  <p class="statement__arabic">الهندوان — هذا هو المكان الذي اخترنا أن نقف فيه.</p>
+  <a href="story.html" class="btn btn--outline">Our Story</a>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <p class="footer__col-title">Navigate</p>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="story.html">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__col-title">Connect</p>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">X / Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 Alhendwan. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — Alhendwan</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<audio id="bg-music" loop preload="none">
+  <source src="audio/ambient.mp3" type="audio/mpeg"/>
+</audio>
+
+<nav class="nav">
+  <a href="landing.html" class="nav__logo"><img src="Alhendwan (2).png" alt="Alhendwan"/></a>
+  <div class="nav__links">
+    <a href="landing.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="story.html">Our Story</a>
+  </div>
+  <div class="nav__right">
+    <div class="nav__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 6.5 6.5a7.5 7.5 0 0 0 10.15 10.15z"/>
+      </svg>
+      <input id="nav-search-input" type="text" placeholder="Search" aria-label="Search"/>
+    </div>
+    <button class="nav__music" id="music-toggle" aria-label="Toggle music">
+      <div class="music-bars paused" id="music-bars"><span></span><span></span><span></span></div>
+      <span id="music-label">Play</span>
+    </button>
+  </div>
+  <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav__mobile">
+  <a href="landing.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="story.html">Our Story</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <span class="label">Collection</span>
+  <h1 class="page-hero__title">The First Drop</h1>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+    <span>الهندوان <em>·</em> موضة هادئة <em>·</em> ثقافة عربية <em>·</em> تصميم مدروس <em>·</em> ألوان الليل <em>·</em> بين عالمين <em>·</em></span>
+  </div>
+</div>
+
+<!-- SHOP -->
+<main class="shop-wrap">
+  <div class="shop-controls">
+    <div class="shop-filters">
+      <button class="active" onclick="filter('all',this)">All</button>
+      <button onclick="filter('tops',this)">Tops</button>
+      <button onclick="filter('bottoms',this)">Bottoms</button>
+      <button onclick="filter('outerwear',this)">Outerwear</button>
+    </div>
+    <div class="shop-search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:13px;height:13px;color:var(--muted)">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 6.5 6.5a7.5 7.5 0 0 0 10.15 10.15z"/>
+      </svg>
+      <input id="shop-search-input" type="text" placeholder="Search pieces…" aria-label="Search"/>
+    </div>
+  </div>
+
+  <div class="shop-grid-items">
+    <div class="card reveal" data-category="tops">
+      <div class="card__visual">
+        <span class="card__glyph">ا</span>
+        <div class="card__soon">Coming Soon</div>
+      </div>
+      <div class="card__info">
+        <span class="card__name">Design 01</span>
+        <span class="card__cat">Tops</span>
+      </div>
+    </div>
+    <div class="card reveal" data-delay="60" data-category="tops">
+      <div class="card__visual">
+        <span class="card__glyph">ل</span>
+        <div class="card__soon">Coming Soon</div>
+      </div>
+      <div class="card__info">
+        <span class="card__name">Design 02</span>
+        <span class="card__cat">Tops</span>
+      </div>
+    </div>
+    <div class="card reveal" data-delay="120" data-category="bottoms">
+      <div class="card__visual">
+        <span class="card__glyph">ه</span>
+        <div class="card__soon">Coming Soon</div>
+      </div>
+      <div class="card__info">
+        <span class="card__name">Design 03</span>
+        <span class="card__cat">Bottoms</span>
+      </div>
+    </div>
+    <div class="card reveal" data-delay="180" data-category="outerwear">
+      <div class="card__visual">
+        <span class="card__glyph">ن</span>
+        <div class="card__soon">Coming Soon</div>
+      </div>
+      <div class="card__info">
+        <span class="card__name">Design 04</span>
+        <span class="card__cat">Outerwear</span>
+      </div>
+    </div>
+    <div class="card reveal" data-delay="240" data-category="tops">
+      <div class="card__visual">
+        <span class="card__glyph">د</span>
+        <div class="card__soon">Coming Soon</div>
+      </div>
+      <div class="card__info">
+        <span class="card__name">Design 05</span>
+        <span class="card__cat">Tops</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <p class="footer__col-title">Navigate</p>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="story.html">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__col-title">Connect</p>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">X / Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 Alhendwan. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  function filter(cat, btn) {
+    document.querySelectorAll('.shop-filters button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.card[data-category]').forEach(c => {
+      c.style.display = (cat === 'all' || c.dataset.category === cat) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
