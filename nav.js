@@ -48,20 +48,49 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbl      = document.getElementById('music-label');
   let playing    = false;
 
-  if (audio && btn) {
-    audio.volume = 0.35;
-    (async () => {
-      try { await audio.play(); playing = true; syncUI(); } catch (_) {}
-    })();
-    btn.addEventListener('click', async () => {
-      playing ? audio.pause() : await audio.play();
-      playing = !playing;
-      syncUI();
-    });
-  }
   function syncUI() {
     bars?.classList.toggle('paused', !playing);
     if (lbl) lbl.textContent = playing ? 'Pause' : 'Play';
+  }
+
+  if (audio && btn) {
+    audio.volume = 0.35;
+
+    /* Try to autoplay (might be blocked) */
+    (async () => {
+      try { 
+        await audio.play(); 
+        playing = true; 
+        syncUI(); 
+      } catch (_) {
+        /* Autoplay blocked, wait for user interaction */
+      }
+    })();
+
+    /* Play/Pause button */
+    btn.addEventListener('click', async () => {
+      if (playing) {
+        audio.pause();
+        playing = false;
+      } else {
+        try {
+          await audio.play();
+          playing = true;
+        } catch (_) {}
+      }
+      syncUI();
+    });
+
+    /* Auto-play on first click anywhere (if not already playing) */
+    document.addEventListener('click', function playOnFirstClick() {
+      if (!playing && audio.paused) {
+        audio.play().then(() => {
+          playing = true;
+          syncUI();
+        }).catch(() => {});
+      }
+      document.removeEventListener('click', playOnFirstClick);
+    }, { once: true });
   }
 
   /* Search */
