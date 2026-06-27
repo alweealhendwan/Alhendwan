@@ -245,16 +245,10 @@ ul, ol { list-style: none; }
   to   { transform: translateX(-50%); }
 }
 
-/* Mobile ticker fix - slower on smaller screens */
+/* Mobile ticker - no animation, static */
 @media (max-width: 768px) {
   .ticker {
-    animation: ticker 50s linear infinite;
-  }
-}
-
-@media (max-width: 480px) {
-  .ticker {
-    animation: ticker 65s linear infinite;
+    animation: none;
   }
 }
 
