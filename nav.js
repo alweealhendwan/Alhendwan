@@ -41,12 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => el.classList.add('in'));
   }
 
-  /* Background music */
+  /* Background music - autoplays once, then stops */
   const audio    = document.getElementById('bg-music');
   const btn      = document.getElementById('music-toggle');
   const bars     = document.getElementById('music-bars');
   const lbl      = document.getElementById('music-label');
   let playing    = false;
+  let hasAutoPlayed = false;
 
   function syncUI() {
     bars?.classList.toggle('paused', !playing);
@@ -55,13 +56,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (audio && btn) {
     audio.volume = 0.35;
+    audio.loop = false; // Don't loop
 
-    /* Try to autoplay (might be blocked) */
+    /* Try to autoplay once (might be blocked) */
     (async () => {
       try { 
         await audio.play(); 
         playing = true; 
+        hasAutoPlayed = true;
         syncUI(); 
+        // Stop after the audio ends
+        audio.addEventListener('ended', function onEnd() {
+          playing = false;
+          hasAutoPlayed = true;
+          syncUI();
+          audio.removeEventListener('ended', onEnd);
+        });
       } catch (_) {
         /* Autoplay blocked, wait for user interaction */
       }
@@ -76,17 +86,29 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           await audio.play();
           playing = true;
+          // Re-attach ended event if user manually plays
+          audio.addEventListener('ended', function onEnd() {
+            playing = false;
+            syncUI();
+            audio.removeEventListener('ended', onEnd);
+          }, { once: true });
         } catch (_) {}
       }
       syncUI();
     });
 
-    /* Auto-play on first click anywhere (if not already playing) */
+    /* Auto-play on first click anywhere (if not already played) */
     document.addEventListener('click', function playOnFirstClick() {
-      if (!playing && audio.paused) {
+      if (!hasAutoPlayed && audio.paused) {
         audio.play().then(() => {
           playing = true;
+          hasAutoPlayed = true;
           syncUI();
+          audio.addEventListener('ended', function onEnd() {
+            playing = false;
+            syncUI();
+            audio.removeEventListener('ended', onEnd);
+          }, { once: true });
         }).catch(() => {});
       }
       document.removeEventListener('click', playOnFirstClick);
