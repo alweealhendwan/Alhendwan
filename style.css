@@ -915,6 +915,34 @@ ul, ol { list-style: none; }
 }
 
 /* ============================================================
+   TYPEWRITER ANIMATION
+   ============================================================ */
+.culture-typewriter {
+  display: inline-block;
+  position: relative;
+}
+
+.typewriter-text {
+  display: inline-block;
+  font-family: var(--font-arabic);
+  font-weight: 600;
+  color: var(--yellow);
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  font-weight: 300;
+  color: var(--yellow);
+  animation: blink 0.7s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {

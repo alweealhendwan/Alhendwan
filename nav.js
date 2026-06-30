@@ -56,28 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (audio && btn) {
     audio.volume = 0.35;
-    audio.loop = false; // Don't loop
+    audio.loop = false;
 
-    /* Try to autoplay once (might be blocked) */
     (async () => {
       try { 
         await audio.play(); 
         playing = true; 
         hasAutoPlayed = true;
         syncUI(); 
-        // Stop after the audio ends
         audio.addEventListener('ended', function onEnd() {
           playing = false;
           hasAutoPlayed = true;
           syncUI();
           audio.removeEventListener('ended', onEnd);
         });
-      } catch (_) {
-        /* Autoplay blocked, wait for user interaction */
-      }
+      } catch (_) {}
     })();
 
-    /* Play/Pause button */
     btn.addEventListener('click', async () => {
       if (playing) {
         audio.pause();
@@ -86,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           await audio.play();
           playing = true;
-          // Re-attach ended event if user manually plays
           audio.addEventListener('ended', function onEnd() {
             playing = false;
             syncUI();
@@ -97,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
       syncUI();
     });
 
-    /* Auto-play on first click anywhere (if not already played) */
     document.addEventListener('click', function playOnFirstClick() {
       if (!hasAutoPlayed && audio.paused) {
         audio.play().then(() => {
@@ -141,6 +134,69 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById(id);
       if (el) { el.value = urlQ; doSearch(urlQ); }
     });
+  }
+
+  /* ============================================================
+     TYPEWRITER EFFECT
+     ============================================================ */
+  const textElement = document.getElementById('typewriter-text');
+  if (textElement) {
+    const words = ['ثقافة', 'culture'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isWaiting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        // Delete characters
+        textElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        // Add characters
+        textElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 60 : 100;
+
+      // If word is complete
+      if (!isDeleting && charIndex === currentWord.length) {
+        // Wait before starting to delete
+        if (!isWaiting) {
+          isWaiting = true;
+          setTimeout(() => {
+            isWaiting = false;
+            isDeleting = true;
+            typeEffect();
+          }, 2000);
+          return;
+        }
+      }
+
+      // If word is fully deleted
+      if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        // Wait before typing next word
+        setTimeout(() => {
+          typeEffect();
+        }, 500);
+        return;
+      }
+
+      // Speed up deletion
+      if (isDeleting) {
+        speed = 40;
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+
+    // Start the effect after a short delay
+    setTimeout(typeEffect, 1500);
   }
 
 });
